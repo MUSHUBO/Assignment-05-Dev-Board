@@ -1,6 +1,6 @@
 
 document.getElementById('btn-contain-box')
-.addEventListener('click', function(event){
+.addEventListener('click', function(){
     alert('Board updated Successfully')
 
     const tuskAssigned = document.getElementById('tusk-assigned').innerText;
