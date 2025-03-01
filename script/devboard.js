@@ -1,11 +1,14 @@
 
+
+
 document.getElementById('btn-contain-box')
 .addEventListener('click', function(){
+    
     alert('Board updated Successfully')
 
     const tuskAssigned = document.getElementById('tusk-assigned').innerText;
     const convertTuskNumber = parseInt(tuskAssigned);
-
+    
     if(convertTuskNumber > 0){
         const sum = convertTuskNumber - 1;
         console.log(sum);
@@ -23,5 +26,9 @@ document.getElementById('btn-contain-box')
         document.getElementById('navbar-number').innerText = sum;
     }
     
-
 })
+
+document.getElementById('another-page')
+.addEventListener('click', function(){
+    window.location.href = 'blog.html'
+}) 
