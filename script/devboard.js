@@ -1,34 +1,39 @@
+const allButtons = document.querySelectorAll('#all-box-element button')
+
+for (let allButton of allButtons) {
+    allButton.addEventListener('click', function () {
+
+        alert('Board updated Successfully')
+        const tuskAssigned = document.getElementById('tusk-assigned').innerText;
+        const convertTuskNumber = parseInt(tuskAssigned);
+
+        if (convertTuskNumber > 0) {
+            const sum = convertTuskNumber - 1;
+            console.log(sum);
+            document.getElementById('tusk-assigned').innerText = sum;
+            this.setAttribute('disabled', true)
+        }
 
 
+        const navbarNumber = document.getElementById('navbar-number').innerText;
+        const convertNavNumber = parseInt(navbarNumber);
+
+        if (convertNavNumber < 29) {
+            const sum = convertNavNumber + 1;
+            console.log(sum);
+            document.getElementById('navbar-number').innerText = sum;
+        }
+        
+    })
+}
 
 document.getElementById('btn-contain-box')
-.addEventListener('click', function(){
-    
-    alert('Board updated Successfully')
+    .addEventListener('click', function () {
 
-    const tuskAssigned = document.getElementById('tusk-assigned').innerText;
-    const convertTuskNumber = parseInt(tuskAssigned);
-    
-    if(convertTuskNumber > 0){
-        const sum = convertTuskNumber - 1;
-        console.log(sum);
-        document.getElementById('tusk-assigned').innerText = sum;
-        document.getElementById('btn-contain-box').disabled = true;
-    }
 
-    
-    const navbarNumber = document.getElementById('navbar-number').innerText;
-    const convertNavNumber = parseInt(navbarNumber);
-    
-    if(convertNavNumber === 23){
-        const sum = convertNavNumber + 1;
-        console.log(sum);
-        document.getElementById('navbar-number').innerText = sum;
-    }
-    
-})
+    })
 
 document.getElementById('another-page')
-.addEventListener('click', function(){
-    window.location.href = 'blog.html'
-}) 
+    .addEventListener('click', function () {
+        window.location.href = 'blog.html'
+    }) 
