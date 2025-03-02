@@ -27,8 +27,8 @@ for (let allButton of allButtons) {
             console.log(sum);
             document.getElementById('navbar-number').innerText = sum;
         }
-        
-        
+
+
     })
 }
 
@@ -43,6 +43,6 @@ updateDateAndTime()
 document.getElementById('another-page')
     .addEventListener('click', function () {
         window.location.href = 'blog.html'
-    }) 
+    })
 
-
+    
