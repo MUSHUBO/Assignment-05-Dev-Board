@@ -2,8 +2,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll("#btn-contain-box");
 
-    buttons.forEach(button => {
+    for (const button of buttons) {
         button.addEventListener("click", function () {
+
             const parentSection = this.closest("section");
 
             const taskTitle = parentSection.querySelector("#box-title").textContent;
@@ -15,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
             newMessage.innerHTML = `<p>You have Completed the Task: <strong>${taskTitle}</strong> at ${currentTime}</p>`;
             document.getElementById("history-section").appendChild(newMessage);
         });
-    });
+    }
 
 
     document.getElementById("btn-history").addEventListener("click", function () {
