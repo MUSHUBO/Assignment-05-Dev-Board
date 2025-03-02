@@ -11,7 +11,11 @@ for (let allButton of allButtons) {
             const sum = convertTuskNumber - 1;
             console.log(sum);
             document.getElementById('tusk-assigned').innerText = sum;
-            this.setAttribute('disabled', true)
+            this.setAttribute('disabled', true);
+
+            if (convertTuskNumber === 1) {
+                alert('Congrats!! You have completed all the current task')
+            }
         }
 
 
@@ -23,15 +27,17 @@ for (let allButton of allButtons) {
             console.log(sum);
             document.getElementById('navbar-number').innerText = sum;
         }
-        
+
     })
 }
 
-document.getElementById('btn-contain-box')
-    .addEventListener('click', function () {
 
+function updateDateAndTime() {
+    const now = new Date().toDateString()
+    document.getElementById('date-and-time').innerText = now;
+}
+updateDateAndTime()
 
-    })
 
 document.getElementById('another-page')
     .addEventListener('click', function () {
